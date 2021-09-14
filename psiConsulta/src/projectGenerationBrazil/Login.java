@@ -9,20 +9,21 @@ public class Login extends Usuario {
 	
 	Dados dados = new Dados();
 	
-	public Login () {	
+	public Login() {	
 		//System.out.println("abrir a classe login");
 	}
 	
 	///////////////////////////// FAZ LOGIN /////////////////////////////
 	public void fazLogin() throws InterruptedException {
-		
-		System.out.print("\n=====================================================");
-		
+
 		do {
-			System.out.print("\nInsira seu usuário: ");
+			System.out.println("\n=====================================================");
+			System.out.println("                   --> LOGIN <--");
+			
+			System.out.print("\nUsuário: ");
 			user = scan.next();
 
-			System.out.print("Insira sua senha: ");
+			System.out.print("Senha: ");
 			senha = scan.next();
 
 			for (int cont = 0; cont < 5; cont++) {
@@ -33,7 +34,7 @@ public class Login extends Usuario {
 			
 			if (!user.equals(dados.getUserV(verificar)) || !senha.equals(dados.getSenhaV(verificar))) {
 				
-				System.out.println("\n*Usuário ou senha inválidos*"
+				System.out.println("\n*        **Usuário ou senha inválidos***"
 						+ "\nTente novamente.");
 			}
 			
@@ -43,12 +44,13 @@ public class Login extends Usuario {
 				
 				for(int cont = 0; cont < 5; cont++) {
 					System.out.print(".");
-					Thread.sleep(750);	
+					Thread.sleep(750);
 				}	
-				System.out.println("\nLogin efetuado com sucesso!!!");
+				
+				System.out.println("\n       ***Login efetuado com sucesso!!!***");
 			}
 		} 
-	
+		
 		while (!user.equals(dados.getUserV(verificar)) || !senha.equals(dados.getSenhaV(verificar)));
 	}
 	
@@ -80,8 +82,8 @@ public class Login extends Usuario {
 		for(int cont = 0; cont < 5; cont++) {
 			if(dados.getUserV(cont).equals("")) {
 				
-				dados.setUserV(user, cont);
-				dados.setUserV(senha, cont);
+				dados.setUserV (user, cont);
+				dados.setUserV (senha, cont);
 								
 				break;
 			}

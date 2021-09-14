@@ -2,8 +2,6 @@ package projectGenerationBrazil;
 
 public class Dados {
 	
-	//String userV[] = {"joao", "evelyn", "pablo", "", "rafa"};
-	//String senhaV[] = {"3232", "4545", "0000", "", "1000"};
 	String userV[] = new String[5];
 	String senhaV[] = new String[5];
 	
@@ -19,36 +17,20 @@ public class Dados {
 		senhaV[1] = "4545";
 		senhaV[2] = "0000";
 		senhaV[3] = "";
-		senhaV[4] = "1000";
-		
+		senhaV[4] = "1000";		
 	}
 	
 	public void imprimeDados() {
-			
-			System.out.println("\nimprimindo usuários e senhas:");
-			
-			for(int cont = 0; cont < 5; cont++) {
-				if(!userV[cont].equals("")) {
-					
-					System.out.println(userV[cont] + "        |" + senhaV[cont]);			
+		
+		System.out.println("\nimprimindo usuários e senhas:");
+		
+		for(int cont = 0; cont < 5; cont++) {
+			if(!userV[cont].equals("")) {					
+				System.out.println(userV[cont] + "        |  " + senhaV[cont]);		
+				
 				}
 			}
 		}
-	
-	/*public void dadosLogin() {
-		
-		userV[0] = "joao";
-		userV[1] = "evelyn";
-		userV[2] = "pablo";
-		userV[3] = "";
-		userV[4] = "rafa";
-		
-		senhaV[0] = "3232";
-		senhaV[1] = "4545";
-		senhaV[2] = "0000";
-		senhaV[3] = "";
-		senhaV[4] = "1000";
-	}*/
 	
 	public String getUserV(int i) {	
 		return userV[i];
